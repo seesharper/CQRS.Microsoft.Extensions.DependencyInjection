@@ -54,10 +54,10 @@ namespace CQRS.Microsoft.Extensions.DependencyInjection.Tests
         public void ShouldNotAddCommandExecutorTwice()
         {
             var serviceCollection = new ServiceCollection();
-            serviceCollection.AddQueryHandlers();
-            serviceCollection.AddQueryHandlers();
+            serviceCollection.AddCommandHandlers();
+            serviceCollection.AddCommandHandlers();
 
-            serviceCollection.Count(sd => sd.ServiceType == typeof(IQueryExecutor)).Should().Be(1);
+            serviceCollection.Count(sd => sd.ServiceType == typeof(ICommandExecutor)).Should().Be(1);
         }
     }
 }
