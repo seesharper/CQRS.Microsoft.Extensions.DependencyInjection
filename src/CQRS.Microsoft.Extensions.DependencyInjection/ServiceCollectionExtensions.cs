@@ -13,7 +13,7 @@
     public static class ServiceCollectionExtensions
     {
         /// <summary>
-        /// Adds all command handlers found in the calling assembly to the <paramref name="serviceCollection"/>.
+        /// Adds all command handlers found in the calling assembly to the <paramref name="serviceCollection"/> as scoped services.
         /// </summary>
         /// <param name="serviceCollection">The target <see cref="IServiceCollection"/>.</param>
         /// <returns><see cref="IServiceCollection"/>.</returns>
@@ -23,7 +23,7 @@
         }
 
         /// <summary>
-        /// Adds all command handlers found in the given <paramref name="assembly"/> to the <paramref name="serviceCollection"/>.
+        /// Adds all command handlers found in the given <paramref name="assembly"/> to the <paramref name="serviceCollection"/> as scoped services.
         /// </summary>
         /// <param name="serviceCollection">The target <see cref="IServiceCollection"/>.</param>
         /// <param name="assembly">The assembly from which to add command handlers. </param>
@@ -51,7 +51,7 @@
         }
 
         /// <summary>
-        /// Adds all query handlers found in the calling assembly to the <paramref name="serviceCollection"/>.
+        /// Adds all query handlers found in the calling assembly to the <paramref name="serviceCollection"/> as scoped services.
         /// </summary>
         /// <param name="serviceCollection">The target <see cref="IServiceCollection"/>.</param>
         /// <returns><see cref="IServiceCollection"/>.</returns>
@@ -61,7 +61,7 @@
         }
 
         /// <summary>
-        /// Adds all query handlers found in the given <paramref name="assembly"/> to the <paramref name="serviceCollection"/>.
+        /// Adds all query handlers found in the given <paramref name="assembly"/> to the <paramref name="serviceCollection"/> as scoped services.
         /// </summary>
         /// <param name="serviceCollection">The target <see cref="IServiceCollection"/>.</param>
         /// <param name="assembly">The assembly from which to add query handlers. </param>

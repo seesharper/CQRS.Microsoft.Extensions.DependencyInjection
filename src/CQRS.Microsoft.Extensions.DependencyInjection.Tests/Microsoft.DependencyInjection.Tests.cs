@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Threading.Tasks;
 using CQRS.Command.Abstractions;
 using CQRS.Query.Abstractions;
@@ -37,6 +38,26 @@ namespace CQRS.Microsoft.Extensions.DependencyInjection.Tests
             var result = await queryExecutor.ExecuteAsync(query);
 
             query.WasHandled.Should().BeTrue();
+        }
+
+        [Fact]
+        public void ShouldNotAddQueryExecutorTwice()
+        {
+            var serviceCollection = new ServiceCollection();
+            serviceCollection.AddQueryHandlers();
+            serviceCollection.AddQueryHandlers();
+
+            serviceCollection.Count(sd => sd.ServiceType == typeof(IQueryExecutor)).Should().Be(1);
+        }
+
+        [Fact]
+        public void ShouldNotAddCommandExecutorTwice()
+        {
+            var serviceCollection = new ServiceCollection();
+            serviceCollection.AddQueryHandlers();
+            serviceCollection.AddQueryHandlers();
+
+            serviceCollection.Count(sd => sd.ServiceType == typeof(IQueryExecutor)).Should().Be(1);
         }
     }
 }

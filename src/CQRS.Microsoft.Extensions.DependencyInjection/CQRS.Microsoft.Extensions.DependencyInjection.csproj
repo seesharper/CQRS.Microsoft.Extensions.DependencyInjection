@@ -5,7 +5,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <Packable>true</Packable>
     <Authors>Bernhard Richter</Authors>
-    <Description>Enables the command handlers and query handlers to be registered using Microsoft.Extensions.DependencyInjection.</Description>
+    <Description>Enables command handlers and query handlers to be registered using Microsoft.Extensions.DependencyInjection.</Description>
     <Copyright>Bernhard Richter</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/seesharper/CQRS.Concepts</PackageProjectUrl>
