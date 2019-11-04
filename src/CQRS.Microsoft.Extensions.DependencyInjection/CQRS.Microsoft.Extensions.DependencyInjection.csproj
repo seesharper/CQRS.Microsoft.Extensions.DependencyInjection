@@ -8,20 +8,20 @@
     <Description>Enables command handlers and query handlers to be registered using Microsoft.Extensions.DependencyInjection.</Description>
     <Copyright>Bernhard Richter</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/seesharper/CQRS.Concepts</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/seesharper/CQRS.Concepts</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/seesharper/CQRS.Microsoft.Extensions.DependencyInjection</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/seesharper/CQRS.Microsoft.Extensions.DependencyInjection</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>CQRS AspNetCore Dotnet</PackageTags>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>portable</DebugType>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
 
   <ItemGroup>
     <PackageReference Include="CQRS.Execution" Version="1.0.0" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.2.0" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
