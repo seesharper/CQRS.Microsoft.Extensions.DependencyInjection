@@ -1,0 +1,30 @@
+namespace CQRS.Microsoft.Extensions.DependencyInjection
+{
+    using System;
+    using CQRS.Execution;
+    using global::Microsoft.Extensions.DependencyInjection;
+
+    /// <summary>
+    /// An <see cref="IQueryHandlerFactory"/> implementation that uses
+    /// an <see cref="IServiceProvider"/> to create query handlers.
+    /// </summary>
+    public class QueryHandlerFactory : IQueryHandlerFactory
+    {
+        private readonly IServiceProvider serviceProvider;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="QueryHandlerFactory"/> class.
+        /// </summary>
+        /// <param name="serviceProvider">The <see cref="IServiceProvider"/> that is responsible for creating query handlers.</param>
+        public QueryHandlerFactory(IServiceProvider serviceProvider)
+        {
+            this.serviceProvider = serviceProvider;
+        }
+
+        /// <inheritdoc/>
+        public object GetQueryHandler(Type queryHandlerType)
+        {
+            return serviceProvider.GetRequiredService(queryHandlerType);
+        }
+    }
+}
